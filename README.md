@@ -1,40 +1,19 @@
 # Navigation
 This project is part of the Deep Reinforcement Learning Nanodegree Program, by Udacity.
-The goal in this project is to create and train an agent to navigate and collect bananas in a large, square world.
+The goal in this project is to create and train two agent to play tennis.
 
 
 # Understanding the environment
-This environment has been built using the Unity Machine Learning Agents Toolkit (ML-Agents), which is an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents. You can read more about ML-Agents by perusing the GitHub repository.
+In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. Thus, the goal of each agent is to keep the ball in play.
 
-The project environment provided by Udacity is similar to, but not identical to the Banana Collector environment on the Unity ML-Agents GitHub page.
+The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
 
-In this environment, an Agent navigates a large, square world collecting bananas. Each episode of this task is limited to 300 steps. A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana. Thus, the goal of the agent is to collect as many yellow bananas as possible, avoiding the blue ones.
+The task is episodic, and in order to solve the environment, your agents must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents). Specifically,
 
-# State description
-The state-space has 37 dimensions and contains the agent's velocity, along with the ray-based perception of objects around the agent's forward direction. Given this information, the agent has to learn how to best select actions. Four discrete actions are available, corresponding to:
+After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent. This yields 2 (potentially different) scores. We then take the maximum of these 2 scores.
+This yields a single score for each episode.
+The environment is considered solved, when the average (over 100 episodes) of those scores is at least +0.5.
 
-0 - move forward
-1 - move backward
-2 - turn left
-3 - turn right
-Solving the environment
-To solve the environment, the Agent must obtain an average score of +13 over 100 consecutive episodes.
-
-Getting the code
-You have two options to get the code contained in this repository:
-
-Option 1. Download it as a zip file
-Click here to download all the content of this repository as a zip file
-Uncompress the downloaded file into a folder of your choice
-Option 2. Clone this repository using Git version control system
-If you are not sure about having Git installed in your system, run the following command to verify that:
-
-$ git --version
-If you need to install it, follow this link to do so.
-
-Having Git installed in your system, you can clone this repository by running the following command:
-
-$ git clone https://github.com/silviomori/udacity-deep-reinforcement-learning-p1-navigation.git
 
 
 # Running the code
@@ -43,11 +22,14 @@ To successfully run the code, you need to ensure that the following files are in
 
 Download the depandicies from requirement.txt file.
 
-1. **Navigation.ipynb** - This is the primary notebook where the final implementation is done. Start running the code here.
-2. **AgentDQ.py** - This file contains all the necessary methods required for the code to function properly. Ensure it is imported into the notebook.
+1. **Tennis.ipynb** - This is the primary notebook where the final implementation is done. Start running the code here.
+2. **DDPG.py** - This file contains all the necessary methods required for the code to function properly. Ensure it is imported into the notebook. It also has replay buffer.
+3. **Model_1.py** - It has actor ( Layer_1 (state_dim, 200), Relu, layer_2(200,150),Relu, layer_3(150,action size), Tanh )and critic (Layer_1 (state_dim, 400), Relu, layer_2(400+action_size,300),Relu, layer_3(150,1) 
 
 Here is the final result which you can expect result.
+<img width="584" alt="Screenshot 2024-12-29 at 4 43 21 PM" src="https://github.com/user-attachments/assets/1fd94ae2-f6b3-4f8b-ad0a-e7f929f55ad7" />
 
-<img width="358" alt="image" src="https://github.com/user-attachments/assets/9449920a-7f29-4af8-8c23-6e9baba30934">
+
+
 
 
