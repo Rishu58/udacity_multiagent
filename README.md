@@ -27,6 +27,8 @@ Download the depandicies from requirement.txt file.
 3. **Model_1.py** - It has actor ( Layer_1 (state_dim, 200), Relu, layer_2(200,150),Relu, layer_3(150,action size), Tanh )and critic (Layer_1 (state_dim, 400), Relu, layer_2(400+action_size,300),Relu, layer_3(150,1) 
 
 Here is the final result which you can expect result.
+
+
 <img width="584" alt="Screenshot 2024-12-29 at 4 43 21 PM" src="https://github.com/user-attachments/assets/1fd94ae2-f6b3-4f8b-ad0a-e7f929f55ad7" />
 
 
