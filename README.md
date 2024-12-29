@@ -32,6 +32,24 @@ Here is the final result which you can expect result.
 <img width="584" alt="Screenshot 2024-12-29 at 4 43 21 PM" src="https://github.com/user-attachments/assets/1fd94ae2-f6b3-4f8b-ad0a-e7f929f55ad7" />
 
 
+# Use trained weights
+
+If you want to use the weight directly then you can refer the weights in directory.
+1. Actor_1.pth
+2. Actor_2.pth
+
+# Idea of future work
+
+
+Explore distributed training using
+1.A3C - Asynchronous Advantage Actor-Critic
+2.A2C - Advantage Actor Critic
+3. Use of LSTM network in Actor Critic
+
+
+   
+
+
 
 
 
